@@ -1,0 +1,147 @@
+/* Cores */
+:root {
+    --primary-color: #000000;
+    /* Preto */
+    --secondary-color: #00FF00;
+    /* Verde vibrante */
+    --text-color: #FFFFFF;
+    /* Branco */
+    --light-text-color: #CCCCCC;
+    /* Cinza claro para detalhes */
+    --accent-color: #00AA00;
+    /* Um verde um pouco mais escuro para hover/destaque */
+}
+
+/* Reset básico e tipografia */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--light-text-color);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: '•';
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 40px 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+header p {
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--light-text-color);
+}
+
+/* Seções */
+section {
+    padding: 40px 0;
+}
+
+section:nth-of-type(even) {
+    background-color: #111111;
+    /* Um preto um pouco mais claro para alternar */
+}
+
+/* Detalhes da experiência e formação */
+.job-item,
+.course-item {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.job-item h3,
+.course-item h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.job-item p,
+.course-item p {
+    color: var(--light-text-color);
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--accent-color);
+    font-size: 0.9em;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
